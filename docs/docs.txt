@@ -1,0 +1,68 @@
+Website du lịch việt nam 
+Cung cấp thông tin địa điểm du lịch, dịch vụ du lịch cả nước. Cung cấp thông tin nhà xe, công ty du lịch, lữ hành, tuyến tàu, bay
+Hỗ trợ đặt vé du lịch 
+Người dùng không cần đăng nhập vẫn có thể đặt được tour 
+Đặt sẽ gồm các thông tin: địa chỉ, số điện thoại,... thanh toán đc (VNPay vào thôi)
+
+
+
+Requirements: Backend Python, SQL server 
+
+User: dùng sẵn của Django 
+
+TouristDestination: chứa thông tin về các địa điểm du lịch trên toàn quốc 
+id (Primary Key)
+name (Tên địa điểm)
+description (Mô tả)
+location (vị trí, tỉnh thành)
+image_url (link ảnh)
+best_season (mùa đẹp nhất để đi du lịch)
+created_at (ngày tạo)
+updated_at (ngày cập nhật)
+
+TourService: Chứa thông tin các dịch vụ du lịch như công ty lữ hành, nhà xe, tuyến tàu, vé máy bay.
+id (Primary Key)
+name (Tên dịch vụ)
+service_type (Loại hình dịch vụ: nhà xe, công ty du lịch, tuyến tàu, bay)
+description (Mô tả chi tiết)
+price (Giá dịch vụ)
+contact_info (Thông tin liên hệ)
+location (Vị trí)
+created_at (Ngày tạo)
+updated_at (Ngày cập nhật)
+
+Booking: Lưu thông tin đặt vé du lịch, người dùng không cần đăng nhập.
+id (Primary Key)
+tour_id (Foreign Key đến bảng TouristDestination)
+service_id (Foreign Key đến bảng TourService)
+customer_name (Tên người đặt)
+phone_number (Số điện thoại)
+address (Địa chỉ)
+email (Email khách hàng)
+booking_date (Ngày đặt)
+total_price (Tổng giá)
+payment_status (Trạng thái thanh toán)
+created_at (Ngày tạo)
+updated_at (Ngày cập nhật) 
+
+
+TransportRoute: Lưu thông tin tuyến tàu, xe hoặc chuyến bay.
+id (Primary Key)
+departure (Điểm khởi hành)
+destination (Điểm đến)
+departure_time (Thời gian khởi hành)
+arrival_time (Thời gian đến)
+price (Giá vé)
+service_provider (Nhà cung cấp dịch vụ, liên kết với TourService)
+created_at (Ngày tạo)
+updated_at (Ngày cập nhật)
+
+Payment: Lưu thông tin thanh toán cho các booking.
+id (Primary Key)
+booking_id (Foreign Key đến bảng Booking)
+amount (Số tiền)
+payment_method (Phương thức thanh toán: thẻ tín dụng, chuyển khoản, tiền mặt)
+payment_date (Ngày thanh toán)
+payment_status (Trạng thái thanh toán)
+created_at (Ngày tạo)
+updated_at (Ngày cập nhật)

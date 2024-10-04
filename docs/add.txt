@@ -1,0 +1,23 @@
+Review
+Lưu đánh giá của khách hàng về các dịch vụ và địa điểm du lịch.
+
+id (Primary Key)
+tour_id (Foreign Key đến bảng TouristDestination)
+service_id (Foreign Key đến bảng TourService)
+user_id (Foreign Key đến bảng User hoặc thông tin khách hàng nếu không có tài khoản)
+rating (Đánh giá số sao)
+comment (Nhận xét)
+created_at (Ngày tạo)
+updated_at (Ngày cập nhật) 
+
+
+CREATE TABLE Review (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    tour_id INT FOREIGN KEY REFERENCES TouristDestination(id),
+    service_id INT FOREIGN KEY REFERENCES TourService(id),
+    user_id INT, -- Có thể là NULL nếu người dùng không đăng nhập
+    rating INT CHECK (rating >= 1 AND rating <= 5), -- Đánh giá từ 1-5 sao
+    comment NVARCHAR(MAX),
+    created_at DATETIME DEFAULT GETDATE(),
+    updated_at DATETIME DEFAULT GETDATE()
+);
