@@ -26,15 +26,15 @@ SECRET_KEY = 'django-insecure-2t9&p*q=g^3!@mh4%s&170(+ovi94rq%x2-2u+f7w1flysdrns
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
 
-# ALLOWED_HOSTS = ['https://web-production-9ab1.up.railway.app/', 'web-production-9ab1.up.railway.app']
+ALLOWED_HOSTS = ['https://https://travelwebvi-production.up.railway.app/', 'https://travelwebvi-production.up.railway.app']
 
-# CSRF_COOKIE_SECURE = True
-# SESSION_COOKIE_SECURE = True
-# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-# CSRF_TRUSTED_ORIGINS = ['https://web-production-9ab1.up.railway.app/', 'web-production-9ab1.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://https://travelwebvi-production.up.railway.app/', 'https://travelwebvi-production.up.railway.app']
 
 
 # Application definition
