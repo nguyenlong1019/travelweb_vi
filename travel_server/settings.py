@@ -28,13 +28,13 @@ DEBUG = True
 
 # ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = ['https://https://travelwebvi-production.up.railway.app/', 'https://travelwebvi-production.up.railway.app']
+ALLOWED_HOSTS = ['https://travelwebvi-production.up.railway.app/', 'travelwebvi-production.up.railway.app']
 
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-CSRF_TRUSTED_ORIGINS = ['https://https://travelwebvi-production.up.railway.app/', 'https://travelwebvi-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://travelwebvi-production.up.railway.app/', 'travelwebvi-production.up.railway.app']
 
 
 # Application definition
