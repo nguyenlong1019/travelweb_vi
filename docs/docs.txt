@@ -1,6 +1,6 @@
 Website du lịch việt nam 
 Cung cấp thông tin địa điểm du lịch, dịch vụ du lịch cả nước. Cung cấp thông tin nhà xe, công ty du lịch, lữ hành, tuyến tàu, bay
-Hỗ trợ đặt vé du lịch 
+Hỗ trợ đặt vé du lịch (??)
 Người dùng không cần đăng nhập vẫn có thể đặt được tour 
 Đặt sẽ gồm các thông tin: địa chỉ, số điện thoại,... thanh toán đc (VNPay vào thôi)
 
@@ -66,3 +66,29 @@ payment_date (Ngày thanh toán)
 payment_status (Trạng thái thanh toán)
 created_at (Ngày tạo)
 updated_at (Ngày cập nhật)
+
+
+Flow:
+Người dùng xem các trải nghiệm, các bài giới thiệu về du lịch, bên cạnh đó sẽ có các tour service 
+do các bên dịch vụ cung cấp 
+
+service - tours: 1 nhà cung cấp cung cấp nhiều tour
+Tour sẽ có thông tin về địa điểm đến  
+Tour cung cấp tour 1 người hay nhiều người 
+Phương tiện di chuyển (máy bay, tàu hỏa, xe khách)
+Số lượng vé còn 
+
+ngày khởi hành 
+ngày về
+địa điểm khởi hành 
+địa điểm đến 
+các hoạt động, dịch vụ đi kèm (ăn uống, khách sạn, hướng dẫn viên du lịch)
+
+
+booking gồm có 
+Thông tin người đặt
+Thông tin điểm đến 
+Thông tin transport route của service cung cấp 
+
+Thiếu phần dịch vụ detail (trong detail có intro, banner, logo, slogan, ... và các tour sẵn)
+Thiếu phần tour (render list tour và phần tour detail, đặt tour và thanh toán)

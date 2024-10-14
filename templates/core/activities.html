@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Hoạt động {% endblock title %}
+
+{% block content %}
+
+    <!-- Services Section -->
+    <section class="services" id="services" style="margin-top: 50px;">
+
+        <!-- <h1 class="heading">
+            <span>a</span>
+            <span>c</span>
+            <span>t</span>
+            <span>i</span>
+            <span>v</span>
+            <span>i</span>
+            <span>t</span>
+            <span>i</span>
+            <span>e</span>
+            <span>s</span>
+        </h1> -->
+
+        <h1 style="font-size: 35px;text-align: center;margin: 20px 0;color: #ffa500;">hoạt động</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fa-solid fa-person-hiking"></i>
+                <h3>Hiking - Đi bộ</h3>
+                <p>
+                    hoạt động đi bộ đường dài trong thời gian ngắn ngày với địa hình tương đối bằng phẳng, dễ hơn và ít thử thách so với trekking
+                </p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-utensils"></i>
+                <h3>Ẩm thực</h3>
+                <p>
+                    Không chỉ dồi dào các loại hải sản đa dạng mà thành phố biển Nha Trang còn không thiếu những thức quà chân quê, nhưng để lại hương vị độc đáo khó quên. 
+                </p>
+            </div>
+
+            <div class="box">
+                <i class="fa-brands fa-servicestack"></i>
+                <h3>Lặn</h3>
+                <p>
+                    Tour lặn biển Vinpearl Nha Trang. Vinpearl Nha Trang là quần thể nghỉ dưỡng - vui chơi - giải trí hàng đầu thành phố biển.
+                </p>
+            </div>
+
+            <div class="box">
+                <i class="fa-brands fa-wizards-of-the-coast"></i>
+                <h3>Khám phá, trải nghiệm</h3>
+                <p>
+                    Bất kỳ điểm du lịch cũng có rất nhiều điều thú vị đang chờ ta khám phá. Và Nha Trang cũng không phải là điều ngoại lệ. 
+                </p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-globe-asia"></i>
+                <h3>"Nha Trang - Một Hành Trình Vòng Quanh Thế Giới"</h3>
+                <p>
+                    Nha Trang, thành phố nằm bên bờ biển miền Trung Việt Nam, không chỉ là một điểm đến du lịch nổi tiếng với những bãi biển tuyệt đẹp và nước biển trong xanh mà còn là một trung tâm văn hóa đa dạng.
+                </p>
+            </div>
+            
+            <div class="box">
+                <i class="fa-solid fa-music"></i>
+                <h3>Giải trí, thư giãn</h3>
+                <p>
+                    Là thiên đường giải trí nổi tiếng, công viên chủ đề VinWonders Nha Trang luôn là điểm đến thu hút hàng triệu khách du lịch trong và ngoài nước mỗi năm. Với diện tích hơn 50ha được xây dựng theo mô hình công viên giải trí tất cả trong một, VinWonders sở hữu đến 6 phân khu trò chơi đặc sắc
+                </p>
+            </div>
+
+            
+
+
+        </div>
+
+
+    </section>
+    <!-- Services Section End -->
+
+    {% include 'footer.html' %}
+
+{% endblock content %}    

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Điểm đến du lịch {% endblock title %}
+
+{% block content %}
+    <!-- Packages Section -->
+    <section class="packages" id="packages" style="margin-top: 50px;">
+
+        <h1 style="font-size: 35px;text-align: center;margin: 20px 0;color: #ffa500;">Điểm đến</h1>
+
+        <div class="box-container">
+            
+            {% for tour in tours %}
+            <div class="box">
+                <img src="{% if tour.image %}{{ tour.image.url }}{% else %}https://cdn-i.vtcnews.vn/resize/th/upload/2024/02/08/1-04430280.jpg{% endif %}" alt="{{tour.name}}">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i> {{tour.name}}</h3>
+                    <p>
+                        {{tour.description}}
+                    </p>
+                    <div class="stars">
+                        <!-- <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i> -->
+                        <p>Mùa đẹp nhất: {{tour.best_season}}</p>
+                    </div>
+                    <a href="{% url 'destination-detail' tour.slug %}" class="btn">Chi tiết</a>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+
+    </section>
+    <!-- Packages Section End -->
+
+    {% include 'footer.html' %}
+{% endblock content %}
+

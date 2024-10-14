@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Dịch vụ {% endblock title %}
+
+{% block content %}
+    <!-- Packages Section -->
+    <section class="packages" id="packages" style="margin-top: 50px;">
+
+        <h1 style="font-size: 35px;text-align: center;margin: 20px 0;color: #ffa500;">Nhà cung cấp dịch vụ</h1>
+
+        <div class="box-container">
+
+            {% for service in services %}
+            <div class="box">
+                <img src="{% if service.image %} {{service.image.url}} {% else %} https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1634123119/blog/tmqw8q2z9fhayk84cevg.webp {% endif %}" alt="{{service.name}}">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>{{service.name}}</h3>
+                    <p>
+                        {% if service.description %}
+                            {{service.description}}
+                        {% else %}
+                            Nhà Hàng Champa Garden trực thuộc khu nghỉ dưỡng Champa Island Nha Trang Resort & Spa. Toạ lạc cạnh dòng sông Cái êm đềm, thực khách có thể tận hưởng không gian ăn uống thuần Việt trong trẻo giữa giữa hàng dừa tươi xanh. 
+                        {% endif %}
+                    </p>
+                    <!-- <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div> -->
+                    {% if service.hotline %}<p>Hotline {{service.hotline}}</p>{% endif %}
+                    {% if service.price %}<div class="price">Giá chỉ từ {{service.price}} </div> {% endif %}
+                    <a href="#" class="btn">Đặt chỗ ngay</a>
+                </div>
+            </div>
+            {% endfor %}
+
+            
+
+        </div>
+
+    </section>
+    <!-- Packages Section End -->
+
+    {% include 'footer.html' %}
+
+{% endblock content %}

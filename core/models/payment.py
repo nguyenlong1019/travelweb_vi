@@ -18,11 +18,11 @@ class Payment(CommonAbstract):
     )
 
     id = models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')
-    booking = models.ForeignKey(Booking, on_delete=models.SET_NULL, null=True)
-    amount = models.DecimalField(max_digits=18, decimal_places=2)
-    payment_method = models.IntegerField(default=0, choices=PAYMENT_METHOD)
-    payment_date = models.DateTimeField(auto_now_add=True)
-    payment_status = models.CharField(max_length=15, default='Pending')
+    booking = models.ForeignKey(Booking, on_delete=models.SET_NULL, null=True, verbose_name='Booking')
+    amount = models.DecimalField(max_digits=18, decimal_places=2, verbose_name='Số tiền')
+    payment_method = models.IntegerField(default=0, choices=PAYMENT_METHOD, verbose_name='Phương thức thanh toán')
+    payment_date = models.DateField(auto_now_add=True, verbose_name='Ngày thanh toán')
+    payment_status = models.CharField(max_length=15, default='Pending', verbose_name='Trạng thái thanh toán')
     
 
     class Meta:

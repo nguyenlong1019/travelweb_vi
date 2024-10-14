@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Trang chủ {% endblock title %}
+
+{% block content %}
+
+<!-- Home Section -->
+<section class="home" id="home">
+
+    <div class="content">
+
+        <h3>Mang lại trải nghiệm đáng giá</h3>
+        <p>Khám Phá Những Điểm Đến Mới Cùng Chúng Tôi, Cuộc Phiêu Lưu Đang Chờ Đợi</p>
+        <!-- <a href="#" class="btn">tìm hiểu thêm</a> -->
+
+    </div>
+
+    <div class="controls">
+        <span class="vid-btn active" data-src="{% static 'assets/images/vid-2.mp4' %}"></span>
+        <span class="vid-btn" data-src="{% static 'assets/images/vid-1.mp4' %}"></span>
+        <span class="vid-btn" data-src="{% static 'assets/images/vid-3.mp4' %}"></span>
+        <span class="vid-btn" data-src="{% static 'assets/images/vid-4.mp4' %}"></span>
+        <span class="vid-btn" data-src="{% static 'assets/images/vid-5.mp4' %}"></span>
+    </div>
+
+    <div class="video-container">
+        <video src="{% static 'assets/images/vid-2.mp4' %}" id="video-slider" loop autoplay muted></video>
+    </div>
+
+</section>
+<!-- Home Section End -->
+
+{% endblock content %}

@@ -1,5 +1,8 @@
 from django.db import models 
-from travel_server.utils import CommonAbstract
+from travel_server.utils import CommonAbstract 
+from ckeditor_uploader.fields import RichTextUploadingField 
+from django.utils.text import slugify 
+import random 
 
 
 class TouristDestination(CommonAbstract):
@@ -10,7 +13,8 @@ class TouristDestination(CommonAbstract):
     location = models.CharField(max_length=255, null=True, blank=True, verbose_name='Vị trí, tỉnh thành')
     image = models.ImageField(upload_to='tour_dest_images/', null=True, blank=True, verbose_name='Ảnh')
     best_season = models.CharField(max_length=100, null=True, blank=True, verbose_name='Mùa đẹp nhất để du lịch')
-
+    detail = RichTextUploadingField(null=True, blank=True, verbose_name='Chi tiết địa điểm')
+    slug = models.SlugField(max_length=255, null=True, blank=True)
 
     class Meta:
         verbose_name = 'Điểm đến du lịch'
@@ -20,4 +24,10 @@ class TouristDestination(CommonAbstract):
     
     def __str__(self):
         return f"{self.id} - {self.name}"
+
+    
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.name) + str(random.randrange(1000, 1000000))
+        super(TouristDestination, self).save(*args, **kwargs)
 

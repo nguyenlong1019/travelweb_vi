@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} {{tour.name}} {% endblock title %}
+
+{% block styles %}
+<style>
+    * {
+        text-align: justify;
+    }
+
+    .new-detail {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 36px;
+        padding: 24px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    p, strong, b, span {
+        font-size: 16px;
+    }
+
+
+</style>
+{% endblock styles %}
+
+{% block content %}
+
+<div class="new-detail">
+    <div style="padding-top: 100px;padding-bottom: 100px;">
+        <h1 style="font-size: 28px;margin-bottom: 10px;font-weight: 700;">{{tour.name}}</h1>
+        {{tour.detail|safe}}
+    </div>
+    <div>
+        <h3>Tour liên quan</h3>
+    </div>
+</div>
+
+<div class="container">
+    <div class="news-related">
+        
+    </div>
+</div>
+
+
+
+{% include 'footer.html' %}
+
+{% endblock content %}

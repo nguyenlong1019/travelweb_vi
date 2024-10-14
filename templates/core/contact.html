@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Liên hệ {% endblock title %}
+{% block content %}
+    <!-- Contact Section -->
+    <section class="contact" id="contact" style="margin-top: 50px;">
+
+        <h1 style="font-size: 35px;text-align: center;margin: 20px 0;color: #ffa500;">liên hệ tư vấn</h1>
+
+
+        <div class="row">
+            <div class="image">
+                <img src="{% static 'assets/images/contact-img.jpg' %}" alt="contact image">
+            </div>
+
+            <form action="{% url 'contact' %}" method="POST">
+                {% csrf_token %}
+
+                <div class="inputBox">
+                    <input type="text" name="name" placeholder="Họ và tên" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="inputBox">
+                    <input type="number" name="phone" placeholder="Số điện thoại" required>
+                    <input type="text" name="title" placeholder="Tiêu đề" required>
+                </div>
+                <textarea placeholder="Nội dung" name="content" id="" cols="30" rows="10"></textarea>
+                <input type="submit" class="btn" value="Gửi">
+
+            </form>
+        </div>
+
+    </section>
+    <!-- Contact Section End -->
+
+    {% include 'footer.html' %}
+    
+{% endblock content %}
