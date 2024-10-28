@@ -92,3 +92,4 @@ Thông tin transport route của service cung cấp
 
 Thiếu phần dịch vụ detail (trong detail có intro, banner, logo, slogan, ... và các tour sẵn)
 Thiếu phần tour (render list tour và phần tour detail, đặt tour và thanh toán)
+Thiếu login và reg

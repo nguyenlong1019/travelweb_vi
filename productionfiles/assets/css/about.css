@@ -1,0 +1,21 @@
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 1em;
+}
+
+h3 {
+    margin: 1em 0 1em;
+}
+
+.about-p {
+    width: 75%;
+}
+
+.about-p img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 1em;
+}
